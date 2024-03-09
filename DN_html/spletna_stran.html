@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="ozadje.js"></script>
+    <link rel="stylesheet" href="izgled.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
+<title>Osebe</title>
+</head>
+<body onload="fetch_data_funkcija_tabela()"><!--klicem funkcijo, ki napolni tabelo oseb-->
+<div id="customSideNavigation" class="CSNav">
+  <a href="file:///C:/Users/Uporabnik/Desktop/DN_html/home_page.html" class="CSNLink"><div class="house_icon_div"><img src="house_png.png" alt="dokument" id="house_icon"></div>Domov</a><br>
+  <a href="file:///C:/Users/Uporabnik/Desktop/DN_html/spletna_stran.html" class="CSNLink"><div class="document_icon_div"><img src="document_png.png" alt="dokument" id="document_icon"></div>Osebe</a><br>
+  <a href="file:///C:/Users/Uporabnik/Desktop/DN_html/projekti.html" class="CSNLink"><div class="document_icon_div"><img src="document_png.png" alt="dokument" id="document_icon"></div>Projekti</a><br>
+</div>
+<div class="headerBar">
+  <span class="openNav1"style="cursor:pointer" onclick="openNav()">&#9776;</span>
+  <span class="headerBarText">Aplikacija 2</span>
+</div>
+<div id = "mainBody">
+<h3 style="font-size:26px;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+<b>Osebe</b></h3>
+<p><hr class="mainLine" color="black"></p><br><br><br>
+  <div class = "container">
+  <table id = "tabela_podatkov" class="basic_tabela">
+      <thead>
+        <tr>
+          <th class="val" colspan="9">
+          <button id = "create_user_button"  class="create_user_button" onclick="create_user_redirect()">Dodaj osebo</button>
+          </th>
+        </tr>
+        <tr class = "first_row">
+          <th class ="pencil"scope="col"></th>
+          <th class ="val"scope="col">Id</th>
+          <th class ="name"scope="col">Ime Priimek</th>
+          <th class ="name"scope="col">E-naslov</th>
+          <th class ="name"scope="col">Naziv</th>
+          <th class ="val"scope="col">Plača (EUR)</th>
+          <th class ="cnum"scope="col">Telefon</th>
+          <th class ="name"scope="col">Lokacija</th>
+          <th class ="name"scope="col">Projekt</th>
+        </tr>
+      </thead>
+      <tbody id="table_body">
+      </tbody>
+  </table>
+  </div>
+</div>
+</body>
+</html> 

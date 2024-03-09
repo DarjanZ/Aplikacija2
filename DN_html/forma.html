@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="ozadje.js"></script>
+    <link rel="stylesheet" href="izgled.css">
+<title>Vnesi/spremeni osebo</title>
+</head>
+<body>
+<div id="customSideNavigation" class="CSNav">
+    <a href="file:///C:/Users/Uporabnik/Desktop/DN_html/home_page.html" class="CSNLink"><div class="house_icon_div"><img src="house_png.png" alt="dokument" id="house_icon"></div>Domov</a><br>
+    <a href="file:///C:/Users/Uporabnik/Desktop/DN_html/spletna_stran.html" class="CSNLink"><div class="document_icon_div"><img src="document_png.png" alt="dokument" id="document_icon"></div>Osebe</a><br>
+    <a href="file:///C:/Users/Uporabnik/Desktop/DN_html/projekti.html" class="CSNLink"><div class="document_icon_div"><img src="document_png.png" alt="dokument" id="document_icon"></div>Projekti</a><br>
+</div>    
+<div class="headerBar">
+    <span class="openNav1"style="cursor:pointer" onclick="openNav()">&#9776;</span>
+    <span class="headerBarText">Aplikacija 2</span>
+</div>
+<div id="mainBody">
+<h3 style="font-size:26px;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+<b>Vnesi/spremeni osebo</b></h3>
+<p><hr class="mainLine" color="black"></p><br><br><br>
+<div class="forma_div">
+<form id = "forma_vnos">
+    <p class="form_desc">Oseba</p>
+    <p><hr color="#ccc"></p><br>
+    <br>
+    <input type="text" class="input_text" id="id_form" name="id" readonly disabled>   
+    <br>
+    <input type="text" class="input_text" id="name_form" name="name" placeholder="Ime in priimek ..." required pattern="^[a-zšđčćžA-ZŠĐČĆŽ\s ]{1,50}$" style="float: left;">
+    <input type="text" class="input_text" id="email_form" name="email" placeholder="E-naslov ..." required pattern="^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$" style="float: right;">
+    <br>
+    <input type="text" class="input_text" id="job_form" name="job" placeholder="Naziv ..." required style="float: left;">
+    <input type="text" class="input_text" id="salary_form" name="salary" placeholder="Placa ..." required pattern="^[0-9]{1,5}(\.[0-9][0-9])?" style="float: right;">
+    <br>
+    <input type="text" class="input_text" id="phone_form" name="phone" placeholder="Telefonska številka" required pattern="([0-9]{3}-[0-9]{3}-[0-9]{3})|([0][1-9]-[0-9]{3}-[0-9]{2}-[0-9]{2})|([0][0-9]{3}-[0-9]{2}-[0-9]{3})">
+    <br>
+    <select class="input_text" name="location_form" id="location_form" required>
+        <option value="" disabled selected >Lokacija</option>
+        <option value="1">Lokacija 1</option>
+        <option value="2">Lokacija 10</option>
+        <option value="3">Lokacija 99</option>
+        <option value="4">Lokacija 100</option>
+    </select>   
+    <br>
+    <select id="project_form" name="project_form">
+        <script>
+            var num = 102;
+            var curr_user_pro_name = "";
+            if(localStorage.length > 0){
+            var temp_val = localStorage.getItem("temp_data"); 
+            var data_of_curr_user = temp_val.split(",");
+            curr_user_pro_name = data_of_curr_user[7]; //ime projekta trenutnega uporabnika
+            }
+        
+            fetch("http://localhost:3000/projekt").then(data => {
+            return data.json();
+        }).then( objectData => {
+           let tableData = `<option value="0">/</option>;`;
+           objectData.forEach(element => {
+            var obstaja = false;
+            for (i=0; i<document.getElementById("project_form").length; ++i){
+                if(document.getElementById("project_form").options[i].value == element.naslov){
+                    obstaja = true;
+                }
+            }
+            if(!obstaja){//dodamo vse projekte v select
+                var sel = document.getElementById("project_form");
+                var opt = document.createElement("option");
+                opt.value = element.id.toString();
+                opt.innerHTML = element.naslov;
+                sel.appendChild(opt);
+
+                if(curr_user_pro_name == opt.innerHTML){
+                    num = opt.value;
+                }
+            }
+            obstaja = false;
+           });
+           //dodamo pravilno vrednost v select
+           document.getElementById("project_form").value = num;
+        });
+        </script>
+    </select>
+</form> 
+<br>
+<br>
+<div class = "buttons_div">
+    <div class="button_R_div">
+    <button id="button_R" onclick="redirect_prva_stran()">Nazaj</button>
+    </div>
+
+    <div class="button_C_div">
+    <button id="button_C" onclick="create_user()" disabled hidden>Dodaj</button>
+    </div>
+
+    <div class="button_U_div">
+    <button id="button_U" onclick="update_user()" disabled hidden>Spremeni</button>
+    </div>
+
+    <div class="button_D_div">
+    <button id="button_D" onclick="delete_user()" disabled hidden>Izbrisi</button>
+    </div>
+</div>
+</div>
+</div>
+</body>
+</html> 

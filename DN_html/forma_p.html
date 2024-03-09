@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="ozadje.js"></script>
+    <link rel="stylesheet" href="izgled.css">
+<title>Vnesi/spremeni projekt</title>
+</head>
+<body>
+<div id="customSideNavigation" class="CSNav">
+    <a href="file:///C:/Users/Uporabnik/Desktop/DN_html/home_page.html" class="CSNLink"><div class="house_icon_div"><img src="house_png.png" alt="dokument" id="house_icon"></div>Domov</a><br>
+    <a href="file:///C:/Users/Uporabnik/Desktop/DN_html/spletna_stran.html" class="CSNLink"><div class="document_icon_div"><img src="document_png.png" alt="dokument" id="document_icon"></div>Osebe</a><br>
+    <a href="file:///C:/Users/Uporabnik/Desktop/DN_html/projekti.html" class="CSNLink"><div class="document_icon_div"><img src="document_png.png" alt="dokument" id="document_icon"></div>Projekti</a><br>
+</div>    
+<div class="headerBar">
+    <span class="openNav1"style="cursor:pointer" onclick="openNav()">&#9776;</span>
+    <span class="headerBarText">Aplikacija 2</span>
+</div>
+<div id="mainBody">
+<h3 style="font-size:26px;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+<b>Vnesi/spremeni projekt</b></h3>
+<p><hr class="mainLine" color="black"></p><br><br><br>
+<div class="forma_p_div">
+<form id = "forma_vnos_p">
+    <p class="form_desc">Projekt</p>
+    <p><hr color="#ccc"></p><br>
+    <br>
+    <input type="text" class="input_text" id="id_form_p" name="id" readonly disabled>
+    <br>
+    <input type="text" class="input_text" id="title_form" name="title" placeholder="Naslov ..." required maxlength="50">
+    <br>
+    <input type="date" class="input_text" id="start_form" name="start" placeholder="Zacetek ...">
+    <br>
+    <input type="date" class="input_text" id="end_form" name="end" placeholder="Konec ...">
+    <br>
+    <select name="status_form" id="status_form" required>
+        <option value="" disabled selected >Stanje</option>
+        <option value="Terminiran">Projekt terminiran</option>
+        <option value="V teku">Projekt v teku</option>
+        <option value="Zakljucen">Projekt zakljucen</option>
+        <option value="Ustavljen">Projekt ustavljen</option>
+        <option value="Testiranje">Projekt v testiranju</option>
+        <option value="V pripravi">Projekt v pripravi</option>
+    </select>
+</form> 
+<br>
+<div class = "buttons_div">
+    <div class="button_R_div">
+    <button id="button_R_p" onclick="redirect_projekti()">Nazaj</button>
+    </div>
+    <div class="button_C_div">
+    <button id="button_C_p" onclick="create_project()" disabled hidden>Dodaj</button>
+    </div>
+    <div class="button_U_div">
+    <button id="button_U_p" onclick="update_project()" disabled hidden>Spremeni</button>
+    </div>
+    <div class="button_D_div">
+    <button id="button_D_p" onclick="delete_project()" disabled hidden>Izbrisi</button>
+    </div>
+</div>
+</div>
+</div>
+</body>
+</html> 

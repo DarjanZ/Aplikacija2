@@ -1,0 +1,300 @@
+.CSNav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 48px;
+    left: 0;
+    background-color: #2f3133;
+    overflow-x: hidden;
+    padding-top: 30px;
+}
+.CSNav a {
+    padding-left: 15px;
+    padding-bottom: 7px;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    color: #f1f1f1;
+    transition: 0.3s; 
+}
+.CSNav .CSNLink{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+.CSNav .CSNLink:hover{
+    background-color: #232425;
+}
+.CSNav .closeNav{ /*To je X v side-meniju*/
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+.OPNav {
+    background-color: #056ac8;
+    margin: 0;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    padding-top: 14px;
+    padding-bottom: 13px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight:bold;
+
+}
+.OPNav .openNav{ /*Tri crtice da se odpre side meni*/
+    padding-left: 15px;
+    padding-right: 13px;
+}
+.headerBar{
+    background-color: #056ac8;
+    font-size: 18px;
+    padding-left: 15px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.headerBar .headerBarText{
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+}
+.headerBar .openNav1{
+    padding-top: 13px;
+    font-size: 18px;
+    color: white;
+}
+/*/////////////////////////////////////////////////////////////////*/
+/*/////////////////////////////////////////////////////////////////*/
+.basic_tabela {
+    padding: 10px;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#mainBody{
+    margin-left: 15px;
+    margin-right: 15px;
+    transition: 0.1s;
+}
+.mainLine{
+    margin: -15px;
+    position: relative;
+    top: 15px;
+}
+.first_row {
+    background-color: #f2f2f2;
+    color: #056ac8;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+th, td{
+	border: 1px solid #d4d4d4;
+	padding: 8px;
+    font-family: 'Calibri';
+}
+td{
+    font-size: 11pt;
+}
+.pencil{
+    width: 10ch;
+}
+.pencil1{
+    width: 20ch;
+}
+.name{
+    width: 50ch;
+    text-align: left;
+}
+.pay{
+    width: 15ch;
+    text-align: right;
+}
+.title{
+    width: 30ch;
+    text-align: left;
+}
+.cnum{
+    width: 20ch;
+    text-align: left;
+}
+.date{
+    width: 20ch;
+    text-align: left;
+}
+.val{
+    width: 8ch;
+    text-align: right;
+}
+.state{
+    width: 20ch; 
+    text-align: left;
+}
+/*/////////////////////////////////////////////////////////////////*/
+/*IKONE*/
+#pencil_icon{
+    height: 20px;
+    width: 20px;
+}
+#pencil_icon:hover{
+    cursor: pointer;
+}
+#document_icon{
+    width: 16px; 
+    height: 23px; 
+    padding-right: 9px;
+}
+#house_icon{
+    width: 22px; 
+    height: 23px; 
+    padding-right: 3px;
+}
+.house_icon_div{
+    right: 3px;
+}
+.document_icon_div, .house_icon_div{
+    display: inline;
+    position: relative;
+    top: 5px;
+}
+#crud_icon{
+    width: 64px;
+    height: 64px;
+    display: inline;
+    position:relative;
+    bottom: 60px;
+}
+/*/////////////////////////////////////////////////////////////////*/
+.container{
+    text-align:center;
+}
+#create_button{
+    position: fixed;
+}
+button{
+    cursor: pointer;
+}
+body{
+    margin: 0;
+}
+/*/////////////////////////////////////////////////////////////////DRUGA STRAN - FORMA/////////////////////////////////////////////////////////////////*/
+input[type=text], select {
+    width: 100%;
+    padding: 12px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=date]{
+    width: 100%;
+    padding: 12px 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: inline-block;
+}
+input[type="date"]:before {
+    content: attr(placeholder) !important;
+    color: #aaa;
+    margin-right: 0.5em;
+}
+input[type="date"]:focus:before,
+input[type="date"]:valid:before {
+    content: "";
+}
+.forma_p_div, .forma_div{
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+    padding: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-bottom: 50px;
+}
+.forma_p_div hr, .forma_div hr{
+    margin: -20px;
+    position: relative;
+    top: 15px;
+}
+.forma_div #name_form, .forma_div #email_form,
+.forma_div #job_form, .forma_div #salary_form{
+    width: 49.5%;
+}
+.forma_p_div .form_desc,
+.forma_div .form_desc{
+    position: relative;
+    font-size: 20px;
+    display: inline;
+    bottom: 5px;
+    right: 10px;
+    font-weight: bold;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+.create_user_button{
+    float: right;
+}
+.button_R_div{
+    display: inline;
+    float: left;
+}
+.button_C_div{
+    display: inline;
+    float: right;
+}
+.button_U_div{
+    display: inline;
+    float: right;
+}
+.button_D_div{
+    display: inline;
+    float: right;
+    padding-right: 5px;
+}
+.buttons_div #button_R,#button_C,#button_U,#button_D,
+#button_R_p,#button_C_p,#button_U_p,#button_D_p,
+#create_user_button, #create_project_button{
+    background-color:#0065d1;
+    border: none;
+    border-radius: 2px;
+    font-family: Arial;
+    font-style:italic;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 7px 10px 7px 10px;    
+    color: white;
+}
+.buttons_div #button_C:hover,#button_R:hover,#button_U:hover,#button_D:hover,
+#create_user_button:hover, #create_project_button:hover{
+    background-color: #056ac8b4;
+}
+/*PLACEHOLDER TRANSITION      ~*/
+.forma_p_div input:not(:focus)::placeholder,
+.forma_div input:not(:focus)::placeholder{
+    position: absolute;
+    left: 10px;
+    top: 12px;
+    font-size: 14px;
+    color: black;
+    transition: 0.5s;
+    font-family: Arial;
+    opacity: 0.5;
+}
+.forma_p_div input:focus::placeholder,
+.forma_div input:focus::placeholder{
+    position: absolute;
+    pointer-events: none;
+    font-size: 10px;
+    left: 10px;
+    top: 0px;
+    transition: 0.5s;
+    font-family: Arial;
+}
