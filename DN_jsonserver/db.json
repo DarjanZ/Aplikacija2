@@ -1,0 +1,108 @@
+{
+  "oseba": [
+    {
+      "id": 122,
+      "ime_priimek": "Gan Han",
+      "email": "GH@hov.si",
+      "naziv": "Razvijalec programske opreme",
+      "placa": 1500,
+      "telefon": "040-123-888",
+      "lokacija_id": 1,
+      "projektId": 81
+    },
+    {
+      "id": 121,
+      "ime_priimek": "Hugo Mos",
+      "email": "JHM@hov.si",
+      "naziv": "Razvijalec programske opreme",
+      "placa": 1500,
+      "telefon": "040-989-123",
+      "lokacija_id": 1,
+      "projektId": 81
+    },
+    {
+      "id": 123,
+      "ime_priimek": "Aja Smrekar",
+      "email": "AjaSmrekar@grov.si",
+      "naziv": "Programer aplikacij",
+      "placa": 1823,
+      "telefon": "01-543-76-34",
+      "lokacija_id": 2,
+      "projektId": 101
+    },
+    {
+      "id": 1,
+      "ime_priimek": "Denis Han",
+      "email": "D.Han@gmail.com",
+      "naziv": "Programer aplikacij",
+      "placa": 1823,
+      "telefon": "01-904-34-53",
+      "lokacija_id": 4,
+      "projektId": 1
+    },
+    {
+      "id": 101,
+      "ime_priimek": "Damjan Sekol Dovič",
+      "email": "dsd@siol.net",
+      "naziv": "Sistemski analist",
+      "placa": 1943,
+      "telefon": "041-233-222",
+      "lokacija_id": 3,
+      "projektId": 41
+    },
+    {
+      "id": 44,
+      "ime_priimek": "Anamarija Jelšek",
+      "email": "AJelsek@grm.com",
+      "naziv": "Administrator podatkovnih baz",
+      "placa": 2000,
+      "telefon": "041-023-236",
+      "lokacija_id": 2,
+      "projektId": 2
+    }
+  ],
+  "projekt": [
+    {
+      "id": 102,
+      "naslov": "Nakup opreme",
+      "zacetek": "2023-12-20",
+      "konec": "2023-12-20",
+      "stanjeId": "Terminiran"
+    },
+    {
+      "id": 81,
+      "naslov": "Operacija P.A.C.S",
+      "zacetek": "2023-09-14",
+      "konec": "2023-09-30",
+      "stanjeId": "V teku"
+    },
+    {
+      "id": 1,
+      "naslov": "Projekt G.E.N.S",
+      "zacetek": "2023-09-01",
+      "konec": "2023-12-20",
+      "stanjeId": "V teku"
+    },
+    {
+      "id": 101,
+      "naslov": "Skrbniški pregled",
+      "zacetek": "2023-12-05",
+      "konec": "",
+      "stanjeId": "Ustavljen"
+    },
+    {
+      "id": 41,
+      "naslov": "Operacija A.r.k.t",
+      "zacetek": "2023-09-20",
+      "konec": "2024-07-31",
+      "stanjeId": "Testiranje"
+    },
+    {
+      "id": 2,
+      "naslov": "Projekt A",
+      "zacetek": "2023-12-27",
+      "konec": "2026-12-29",
+      "stanjeId": "V pripravi"
+    }
+  ]
+}
